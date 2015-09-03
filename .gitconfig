@@ -11,7 +11,7 @@
     recon = rebase --continue
     copr = !sh -c 'git checkout -b pr/$0 upstream/pr/$0'
     release-notes = !sh -c 'git log release_2015-0$0..HEAD --format=%s --no-merges'
-    master-blaster = !sh -c 'gti branch | grep -v master | xargs git branch -D'
+    master-blaster = !sh -c 'git branch | grep -v master | xargs git branch -D'
     clean-merged-branches = !sh -c 'git branch --merged master | grep -v master | xargs -n 1 git branch -d'
 [push]
 	default = current
